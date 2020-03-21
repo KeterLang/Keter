@@ -1,0 +1,44 @@
+// Basic Sheilku in one file!
+
+; "Hello, World!"
+; "%i" 0
+var a : "string"
+; "%s" a
+
+// Basic Function
+fn myFunction [] {
+    ; "output with no vars!"
+}
+
+// Add Numbers Function
+fn addTwoNumbers [x / y]{
+    var z: x + y
+    ; "%i + %i = %i" x y z
+}
+
+// Calling Functions
+myFunction[]
+addTwoNumbers[13 / 24]
+
+// For Loop
+var arr = :["string one", "string two", "string three", "string four"]
+for [ i in arr ] {
+    ; "%s" i
+}
+
+// While Loop
+var count = 0
+while [ count < 130 ]{
+    count++
+    ; "%i" count
+}
+
+// If / Else / Else If
+var x = 124
+? [ x == 124 ]{
+    ; "x = %i (One-Twenty-Four" x
+} -? [ x == 123 ] {
+    ; "x = %i (One-Twenty-Three)" x
+} !? {
+    ; "x = %i (Unsure)" x
+}
